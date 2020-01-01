@@ -1,5 +1,9 @@
 # redux_yt_mlessons_tracks
 Investigating the react-redux, router, redux, search, redux-thunc async actions (later add bootstrap, hooks, admin, ...) 
+Using https://www.youtube.com/watch?v=BS7fRPWmNZo&list=PLIcAMDxr6tprSzqKmfhDiW00GWbDcs8lE and [Pro Reacy 16]
+
+
+***************************************************************************************************
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
