@@ -33,6 +33,9 @@
     ]
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "bootstrap": "^4.4.1",
     "nodemon": "^2.0.2"
   }
 }
