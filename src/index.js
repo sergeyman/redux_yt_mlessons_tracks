@@ -1,12 +1,46 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-// import App from './App';
-// import * as serviceWorker from './serviceWorker';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-// ReactDOM.render(<App />, document.getElementById('root'));
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+
+import "bootstrap/dist/css/bootstrap.css";
+//import "@fortawesome/fontawesome-free/css/all.min.css";
+
+import './index.css';
+import App from './App';
+//import * as serviceWorker from './serviceWorker';
+
+const initialState = [
+    'Album 1',
+    'Album 2'
+]
+//The store
+// The reducer
+//function playlist(state = [], action) {
+function playlist(state = initialState, action) {
+    //console.log(action);
+    if(action.type === 'ADD_TRACK') {
+        return [
+            ...state,                   //* empty array + payload ('...' - add value to ar. and retrn NEW ARRAY)
+            action.payload
+        ];
+    }
+    return state;
+} 
+const store = createStore(playlist);    //adding reducer
+
+ReactDOM.render(
+    <Provider store = {store}>
+        <App />
+    </Provider>, 
+    document.getElementById('root')
+);
 
 
+
+
+/*
 import { createStore } from 'redux';
 import "bootstrap/dist/css/bootstrap.css";
 //import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -64,3 +98,5 @@ addTrackBtn.addEventListener('click', () => {
     console.log('trackname', trackName);
     store.dispatch({ type: 'ADD_TRACK', payload: trackName });
 })
+
+*/
